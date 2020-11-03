@@ -60,7 +60,7 @@ const programming = {
   isRewarding: true,
   difficulty: 8,
   jokes:
-    "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke"
+    "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke",
 };
 ```
 
@@ -75,6 +75,7 @@ const programming = {
 - Create an object method where if the keys "isChallenging" and "isRewarding" have values of "true", then return "Learning the programming languages: "JavaScript, Python, Ruby, Go" is rewarding and challenging. **Bonus:** In a comment, explain what is printed if we console.log an object method without calling it and why.
 
 **Bonus**:
+
 - Make sure that any other code cannot delete or change properties of the object.
 
 **Hint:**
