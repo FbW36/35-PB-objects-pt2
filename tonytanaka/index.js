@@ -13,16 +13,16 @@ console.log(givenRange.check(6));
 */
 
 // 1 right way
-function check(num, obj) {
+function checking(num, obj) {
   if (num >= obj.min && num <= obj.max) {
     return true;
   }
   return false;
 }
-console.log(check(4, { min: 0, max: 5 }));
-console.log(check(4, { min: 4, max: 5 }));
-console.log(check(4, { min: 6, max: 10 }));
-console.log(check(5, { min: 5, max: 5 }));
+console.log(checking(4, { min: 0, max: 5 }));
+console.log(checking(4, { min: 4, max: 5 }));
+console.log(checking(4, { min: 6, max: 10 }));
+console.log(checking(5, { min: 5, max: 5 }));
 
 // 2
 const hand = [
@@ -37,7 +37,9 @@ const hand = [
 function counter(tiles) {
   let sum = 0;
   for (let x = 0; x < tiles.length; x++) {
-    sum = sum + tiles[x].score;
+//    sum = sum + tiles[x].score;
+    sum = sum + tiles[x]["score"];
+
   }
   return sum;
 }
@@ -56,10 +58,11 @@ console.log("Object is empty? ", test(1));
 function countLetters(str) {
   const objCount = {};
   for (let x = 0; x < str.length; x++) {
-    if (!objCount[str[x]]) {
-      objCount[str[x]] = 1;
+    if (objCount[str[x]]) {
+      objCount[str[x]] += 1;
     } else {
-      objCount[str[x]] = objCount[str[x]] + 1;
+      objCount[str[x]] = 1;
+
     }
   }
   return objCount;
