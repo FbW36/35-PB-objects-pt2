@@ -91,6 +91,23 @@ const countletter = (str) => {
 
 console.log(countletter("ffffeeedddf"));
 
+let ourString = "onomatopeia";
+
+const countLetters = (string) => {
+  const mapOfOccurrence = {};
+  for (let i = 0; i < ourString.length; i++) {
+    console.log(mapOfOccurrence[string[i]]);
+    if (mapOfOccurrence[string[i]]) {
+      mapOfOccurrence[string[i]] += 1;
+    } else {
+      mapOfOccurrence[string[i]] = 1;
+    }
+  }
+  return mapOfOccurrence;
+};
+
+console.log("onomatopeia", countLetters(ourString));
+
 // Example:
 
 // - countLetters("tree") ➞ {t: 1, r: 1, e: 2}
@@ -169,7 +186,7 @@ const find = () => {
 console.log(find());
 
 // **Bonus:** In a comment, explain what is printed if we console.log an object method without calling it and why.
-console.log(find);
+console.log();
 // **Bonus**:
 
 // - Make sure that any other code cannot delete or change properties of the object.
