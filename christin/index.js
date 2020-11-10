@@ -74,9 +74,9 @@ let ourString = "thats a string";
 const countLetters = (string) => {
   const mapOfOccurrences = {};
 
-  for (i = 0; i < ourString.length; i++) {
+  for (i = 0; i < string.length; i++) {
     if (mapOfOccurrences[string[i]]) {
-      mapOfOccurrences.count += 1;
+      mapOfOccurrences[string[i]]++;
     } else {
       mapOfOccurrences[string[i]] = 1;
     }
@@ -85,6 +85,7 @@ const countLetters = (string) => {
 };
 
 countLetters(ourString);
+console.log("countLetters=>", countLetters(ourString));
 
 // 5. 5. Free Shipping. Create a function that determines whether an online order should get free shipping. An order gets free shipping if the total cost of items exceeds €50.
 
@@ -144,7 +145,7 @@ function modifyProgrammingLanguage(data) {
   return programming;
 }
 
-console.log(modifyProgrammingLanguage("Go"));
+//console.log(modifyProgrammingLanguage("Go"));
 //------------------------------------------------
 
 // b)
@@ -171,7 +172,7 @@ modifyProgrammingData({
   difficulty: 7,
 });
 
-console.log(programming);
+//console.log(programming);
 
 // c) - Using the delete keyword, write the command to remove the jokes key from the programming object.
 
@@ -180,7 +181,7 @@ delete programming.jokes;
 //d) - Write a command to add a new key called isFun and a value of true to the programming object.
 
 programming.isFun = true;
-console.log(programming);
+//console.log(programming);
 
 //e) - Using a loop, iterate through the languages array and console.log all of the languages.
 
@@ -196,7 +197,7 @@ function getLanguages(obj) {
 }
 
 getLanguages(programming);
-console.log(languages); // [ 'JavaScript', 'Python', 'Ruby', 'Go' ]
+//console.log(languages); // [ 'JavaScript', 'Python', 'Ruby', 'Go' ]
 
 //f) - Using a loop, console.log all of the keys in the programming object.
 
@@ -209,7 +210,7 @@ function getKeys(obj) {
 }
 
 getKeys(programming);
-console.log("keys=>", keys); // keys=> [ 'languages', 'isChallenging', 'isRewarding', 'difficulty', 'isFun' ]
+//console.log("keys=>", keys); // keys=> [ 'languages', 'isChallenging', 'isRewarding', 'difficulty', 'isFun' ]
 
 //g) - Using a loop, console.log all of the values in the programming object.
 
@@ -222,15 +223,15 @@ function getValues(obj) {
 }
 
 getValues(programming);
-console.log("Values==>", values); // Values==> [ [ 'JavaScript', 'Python', 'Ruby', 'Go' ], true, true, 7, true ]
+//console.log("Values==>", values); // Values==> [ [ 'JavaScript', 'Python', 'Ruby', 'Go' ], true, true, 7, true ]
 
 //h) - Create an object method where if the keys "isChallenging" and "isRewarding" have values of "true", then return "Learning the programming languages: "JavaScript, Python, Ruby, Go" is rewarding and challenging. Bonus: In a comment, explain what is printed if we console.log an object method without calling it and why.*/
 
 programming.content = `Learning the programming Languages: "${languages}" is rewarding and challenging`;
-console.log(programming);
+//console.log(programming);
 
 if (programming.isChallenging === true && programming.isRewarding === true) {
-  console.log(programming.content);
+  //console.log(programming.content);
 }
 
 // Bonus: In a comment, explain what is printed if we console.log an object method without calling it and why.*/
