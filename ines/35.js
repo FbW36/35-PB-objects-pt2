@@ -134,3 +134,7 @@ if(programming.isChallenging === true && programming.isRewarding === true){
     console.log( `Learning the programming languages: ${programming.languages} is rewarding and challenging.`)
 }
 
+//Bonus
+Object.seal(programming);
+delete programming.languages;
+console.log("cannot delete",programming)
