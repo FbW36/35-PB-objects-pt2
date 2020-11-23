@@ -75,7 +75,7 @@ const programming = {
   difficulty: 8,
   jokes:
     "http://stackoverflow.com/questions/234075/what-is-your-best-programmer-joke",
-    howsLearning: function () {
+    howsLearning: function (obj) {
       if(programming.isChallenging === true && programming.isRewarding === true) {
         return `Learning the programming languages: ${languages} is rewarding and challenging.`
       }
@@ -111,7 +111,6 @@ for(i = 0; i < valuesToArr.length; i++) {
 }
 // Create an object method where if the keys "isChallenging" and "isRewarding" have values of "true", then return "Learning the programming languages: "JavaScript, Python, Ruby, Go" is rewarding and challenging. Bonus: In a comment, explain what is printed if we console.log an object method without calling it and why.
 
-
 log(programming.howsLearning())
 // if we only log(howsLearning()), we get ReferenceError: howsLearning is not defined -> it's because the method is not recognized in the global scope, unless we prefix it with an objectName
 
@@ -120,6 +119,5 @@ log(programming.howsLearning())
 // Make sure that any other code cannot delete or change properties of the object:
 
 Object.seal(programming)
-
 programming.difficulty = 10
-log('programming-->',programming)
+log('programming -->', programming)
