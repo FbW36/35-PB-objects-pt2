@@ -114,3 +114,10 @@ for(i = 0; i < valuesToArr.length; i++) {
 log(programming.howsLearning())
 // if we only log(howsLearning()), we get ReferenceError: howsLearning is not defined -> it's because the method is not recognized in the global scope, unless we prefix it with an objectName
 
+// Bonus:
+
+// Make sure that any other code cannot delete or change properties of the object:
+
+Object.seal(programming)
+programming.difficulty = 10
+log('programming -->', programming)
